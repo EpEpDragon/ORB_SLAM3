@@ -79,6 +79,10 @@ Required to calculate the alignment of the trajectory with the ground truth. **R
 
 We provide some examples to process input of a monocular, monocular-inertial, stereo, stereo-inertial or RGB-D camera using ROS. Building these examples is optional. These have been tested with ROS Melodic under Ubuntu 18.04.
 
+## Realsense SDK (optional)
+
+The [Realsense SDK](https://github.com/IntelRealSense/librealsense) is required to use realsense cameras, as some of the examples do.
+
 # 3. Building ORB-SLAM3 library and examples
 
 Clone the repository:
@@ -155,6 +159,8 @@ Execute the following script to process sequences and compute the RMS ATE:
 
 ### Building the nodes for mono, mono-inertial, stereo, stereo-inertial and RGB-D
 Tested with ROS Melodic and ubuntu 18.04.
+
+**Beware!** If the Realsense SDK is not installed (Or cannot be found) the examples using realsense cameras will not be built!
 
 1. Add the path including *Examples/ROS/ORB_SLAM3* to the ROS_PACKAGE_PATH environment variable. Open .bashrc file:
   ```
